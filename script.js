@@ -1,35 +1,53 @@
 //function declaration
-function kwadraten1 (getal1, getal2){
-    const kwadraadje1 = getal1 ** 2;
-    const kwadraadje2 = getal2 ** 2;
-    return kwadraadje1
-    return kwadraadje2
-
-    console.log ("kwadraat1");
+function doSquareCalculation(number1, number2) {
+    const number1Squared = number1 * number1;
+    const number2Squared = number2 * number2;
+    const sum = number1Squared + number2Squared;
+    const sumSquared = sum * sum;
+    return sumSquared;
 }
-
-
-const bereken = kwadraten ([10, 46]);
-console.log (bereken);
 
 
 
 
 //function expression
-const kwadraten2 = function (getal3, getal4) {
-    return getal3 * 2;
-    console.log ()
-}
-kwadraten2 (52,96);
+const doSquareCalculation = function(number1, number2) {
+    const number1Squared = number1 * number1;
+    const number2Squared = number2 * number2;
+    const sum = number1Squared + number2Squared;
+    const sumSquared = sum * sum;
+    return sumSquared;
+};
 
+//More readable expression
+const square = function(number) {
+    return number * number;
+};
 
-
+const doSquareCalculation = function(number1, number2) {
+    return square(square(number1) + square(number2));
+};
 
 //arrow function
-const square = getal5 => getal6 *2;
-const voerCalcUit = (getal7, getal8) =>
-    square (square(getal7) + square(getal8));
+const doSquareCalculation = (number1, number2) => {
+    const number1Squared = number1 * number1;
+    const number2Squared = number2 * number2;
+    const sum = number1Squared + number2Squared;
+    const sumSquared = sum * sum;
+    return sumSquared;
+};
 
+//shorter arrow function
+const doSquareCalculation = (number1, number2) => {
+    const sum = number1 * number1 + number2 * number2;
+    return sum * sum;
+};
+
+//more readabel arrow function
+const square = number => number * number;
+
+const doSquareCalculation = (number1, number2) =>
+    square(square(number1) + square(number2));
 
 // dit is de 'normale' beste manier om elke functie te declareren
 // const square = (number) => {
